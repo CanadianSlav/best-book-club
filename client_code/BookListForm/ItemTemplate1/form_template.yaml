@@ -1,0 +1,20 @@
+components:
+- data_bindings:
+  - {code: 'self.item[''title'']', property: text, writeback: false}
+  layout_properties: {grid_position: 'BTRBOO,KWDKPN'}
+  name: book_title
+  properties: {align: center, role: title}
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''cover_image'']', property: source, writeback: false}
+  layout_properties: {grid_position: 'PPPKQB,WYSIUF'}
+  name: cover_image
+  properties: {height: 281.1543884277344}
+  type: Image
+- event_bindings: {click: details_button_click}
+  layout_properties: {grid_position: 'KOWSSH,DNVZMZ'}
+  name: details_button
+  properties: {text: Details}
+  type: Button
+container: {type: ColumnPanel}
+is_package: true

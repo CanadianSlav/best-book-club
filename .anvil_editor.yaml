@@ -6,7 +6,9 @@ unique_ids:
     BookDetailForm: '174529246445726679815050.763443'
     BookForm: '1745292430485816954276843.704'
     BookListForm: '1745365965634481585076799.6348'
+    BookListForm.ItemTemplate1: '1745366020382843517876397.0035'
     MyFavouritesForm: '1745292490848645301663534.5017'
   modules: {}
   scripts: {}
-  server_modules: {}
+  server_modules:
+    ServerModule1: '1745367778853772695754376.1157'
