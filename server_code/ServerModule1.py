@@ -7,6 +7,7 @@ import anvil.server
 @anvil.server.callable
 def get_books():
     return app_tables.books.search()
+  
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.

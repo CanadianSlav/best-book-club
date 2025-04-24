@@ -11,10 +11,20 @@ components:
   name: cover_image
   properties: {height: 281.1543884277344}
   type: Image
+- event_bindings: {click: edit_button_click}
+  layout_properties: {grid_position: 'KOWSSH,FLBDEC'}
+  name: edit_button
+  properties: {icon: 'fa:pencil-square', role: filled-button, text: ''}
+  type: Button
 - event_bindings: {click: details_button_click}
   layout_properties: {grid_position: 'KOWSSH,DNVZMZ'}
   name: details_button
-  properties: {text: Details}
+  properties: {role: filled-button, text: Details}
+  type: Button
+- event_bindings: {click: delete_button_click}
+  layout_properties: {grid_position: 'KOWSSH,YRYWQJ'}
+  name: delete_button
+  properties: {background: 'theme:Error', icon: 'fa:trash', role: filled-button, text: ''}
   type: Button
 container: {type: ColumnPanel}
 is_package: true
