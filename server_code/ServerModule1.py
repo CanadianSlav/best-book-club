@@ -15,7 +15,7 @@ def add_review(book, rating, review_text):
         app_tables.reviews.add_row(
             user=user,
             book=book,
-            rating=int(rating),
+            rating=(rating),
             review_text=review_text)
 
 @anvil.server.callable
