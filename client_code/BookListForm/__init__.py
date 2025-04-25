@@ -17,3 +17,13 @@ class BookListForm(BookListFormTemplate):
       open_form('BookForm')
 
     # Any code you write here will run before the form opens.
+
+  def button_login_click(self, **event_args):
+    anvil.users.login_with_form()
+
+  def button_logout_click(self, **event_args):
+    anvil.users.logout()
+    open_form('BookListForm')
+
+  def login_button_click(self, **event_args):
+    anvil.users.login_with_form()
