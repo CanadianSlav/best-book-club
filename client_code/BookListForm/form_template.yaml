@@ -2,7 +2,7 @@ components:
 - event_bindings: {click: login_button_click}
   layout_properties: {grid_position: 'GTIETM,MFMGGU'}
   name: button_login
-  properties: {role: elevated-button, text: Login}
+  properties: {role: elevated-button, text: Login, visible: true}
   type: Button
 - event_bindings: {click: button_logout_click}
   layout_properties: {grid_position: 'GTIETM,PUXIDY'}

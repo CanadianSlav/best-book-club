@@ -15,7 +15,7 @@ def add_review(book, rating, review_text):
         app_tables.reviews.add_row(
             user=user,
             book=book,
-            rating=(rating),
+            rating=str(rating),
             review_text=review_text)
 
 @anvil.server.callable
@@ -34,6 +34,18 @@ def is_favourite(book):
 def add_to_favourites(book):
     user = anvil.users.get_user()
     app_tables.favourites.add_row(user=user, book=book)
+
+@anvil.server.callable
+def get_favourites():
+    user = anvil.users.get_user()
+    row = app_tables.favourites.get(user=user)
+    books = []
+    print(row['book'])
+    for item in row['book']:
+        books.append(item)
+        print(item)
+    return books
+
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
 #
