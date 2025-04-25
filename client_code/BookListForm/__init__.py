@@ -27,3 +27,7 @@ class BookListForm(BookListFormTemplate):
 
   def login_button_click(self, **event_args):
     anvil.users.login_with_form()
+
+  def favourite_books_button_click(self, **event_args):
+      open_form('MyFavouritesForm')
+

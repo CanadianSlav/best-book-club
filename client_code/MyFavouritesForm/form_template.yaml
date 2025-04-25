@@ -1,7 +1,7 @@
 components:
-- layout_properties: {grid_position: 'QFOJNR,TVVYHH'}
-  name: repeating_panel_favorites
-  properties: {item_template: MyFavouritesForm.ItemTemplate3}
+- layout_properties: {grid_position: 'QAAKKM,PLEUPH'}
+  name: repeating_panel_favourites
+  properties: {item_template: BookListForm.ItemTemplate1}
   type: RepeatingPanel
 container: {type: ColumnPanel}
 is_package: true

@@ -48,7 +48,7 @@ components:
   name: dropdown_rating
   properties:
     include_placeholder: true
-    items: ['1', '2', '3', '4', '5']
+    items: [⭐, ⭐⭐, ⭐⭐⭐, ⭐⭐⭐⭐, ⭐⭐⭐⭐⭐]
     placeholder: 'Select the rating '
   type: DropDown
 - layout_properties: {grid_position: 'SHADFM,UXMAQE'}

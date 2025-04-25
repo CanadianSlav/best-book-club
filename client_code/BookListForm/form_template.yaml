@@ -2,16 +2,21 @@ components:
 - event_bindings: {click: login_button_click}
   layout_properties: {grid_position: 'GTIETM,MFMGGU'}
   name: button_login
-  properties: {role: outlined-button, text: Login}
+  properties: {role: elevated-button, text: Login}
   type: Button
 - event_bindings: {click: button_logout_click}
   layout_properties: {grid_position: 'GTIETM,PUXIDY'}
   name: button_logout
-  properties: {role: outlined-button, text: Log out}
+  properties: {role: elevated-button, text: Log out}
   type: Button
 - layout_properties: {grid_position: 'IFUNBG,WEXCSH'}
-  name: button_1
+  name: button_add_book
   properties: {role: elevated-button, text: Add New Book}
+  type: Button
+- event_bindings: {click: favourite_books_button_click}
+  layout_properties: {grid_position: 'IFUNBG,BZPBFP'}
+  name: button_favourite_books
+  properties: {role: elevated-button, text: Favourite Books}
   type: Button
 - layout_properties: {grid_position: 'HTSJRL,LROABW'}
   name: repeating_panel_books
