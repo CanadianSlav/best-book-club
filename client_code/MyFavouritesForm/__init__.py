@@ -12,8 +12,13 @@ class MyFavouritesForm(MyFavouritesFormTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
-    # self.repeating_panel_favourites.items = anvil.server.call('get_favourites')
     user = anvil.users.get_user()
-    favs = app_tables.favourites.search(user=user)
-    self.repeating_panel_favorites.items = [f['book'] for f in favs]
+    if not user:
+        alert("You must be logged in to view your favorite books.")
+        open_form('BookListForm')  # Send them back to book list
+        return
+
+    # Any code you write here will run before the form opens.
+
+    self.repeating_panel_favourites.items = anvil.server.call('get_favorite_books')
+ 
