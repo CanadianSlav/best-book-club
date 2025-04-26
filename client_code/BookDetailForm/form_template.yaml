@@ -9,7 +9,7 @@ components:
     - {code: 'self.item[''title'']', property: text, writeback: false}
     layout_properties: {grid_position: 'OSAFDT,AJEMZM'}
     name: title
-    properties: {}
+    properties: {align: center, role: title}
     type: Label
   layout_properties: {grid_position: 'KKZSXN,LIIWXH'}
   name: column_panel_1
@@ -19,19 +19,19 @@ components:
   - {code: 'self.item[''author'']', property: text, writeback: false}
   layout_properties: {grid_position: 'FCERJA,YSUWNN'}
   name: author
-  properties: {}
+  properties: {align: right, role: input-prompt}
   type: Label
 - data_bindings:
-  - {code: 'self.item[''author'']', property: text, writeback: false}
+  - {code: 'self.item[''genre'']', property: text, writeback: false}
   layout_properties: {grid_position: 'OUKNDN,CSQPNH'}
   name: genre
-  properties: {}
+  properties: {align: left}
   type: Label
 - data_bindings:
   - {code: 'self.item[''summary'']', property: text, writeback: false}
   layout_properties: {grid_position: 'WBNTQT,XVXSOI'}
   name: summary
-  properties: {}
+  properties: {align: center}
   type: Label
 - data_bindings:
   - {code: 'self.item[''cover_image'']', property: source, writeback: false}

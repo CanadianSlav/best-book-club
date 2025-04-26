@@ -53,6 +53,25 @@ def get_favorite_books():
     return [f['book'] for f in favs]
 
 @anvil.server.callable
-def add_article(article_dict):
-  app_tables.articles.add_row(
-    **article_dict)
+def add_new_book(title, author, genre, summary, cover_image):
+    app_tables.books.add_row(
+        title=title,
+        author=author,
+        genre=genre,
+        summary=summary,
+        cover_image=cover_image
+    )
+
+@anvil.server.callable
+def update_book(book, title, author, genre, summary, cover_image):
+  book.update(
+    title=title,
+    author=author,
+    genre=genre,
+    summary=summary,
+    cover_image=cover_image
+  )
+
+@anvil.server.callable
+def delete_book(book):
+    book.delete()

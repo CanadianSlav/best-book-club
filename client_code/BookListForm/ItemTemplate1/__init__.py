@@ -21,5 +21,6 @@ class ItemTemplate1(ItemTemplate1Template):
     open_form('BookForm', book=self.item)
 
   def delete_button_click(self, **event_args):
-    app_tables.books.delete_row(self.item)
-    open_form('BookListForm')  # Refresh list
+    if confirm("Are you sure you want to delete this book?"):
+        anvil.server.call('delete_book', self.item)
+        open_form('BookListForm')

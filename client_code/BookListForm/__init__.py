@@ -33,15 +33,4 @@ class BookListForm(BookListFormTemplate):
 
   def add_article_button_click(self, **event_args):
     # Initialise an empty dictionary to store the user inputs
-    new_article = {}
-    # Open an alert displaying the 'ArticleEdit' Form
-    save_clicked = alert(
-      content=Bookform(item=new_article),
-      title="Add Article",
-      large=True,
-      buttons=[("Save", True), ("Cancel", False)],
-    )
-    # If the alert returned 'True', the save button was clicked.
-    if save_clicked:
-      anvil.server.call('add_article', new_article)
-      self.refresh_articles()
+    open_form('BookForm')
