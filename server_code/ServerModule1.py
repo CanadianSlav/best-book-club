@@ -75,6 +75,16 @@ def update_book(book, title, author, genre, summary, cover_image):
 @anvil.server.callable
 def delete_book(book):
     book.delete()
+    favs = app_tables.favourites.get(book=book)
+    if favs:
+        favs.delete()
+    
+@anvil.server.callable
+def no_favourites():
+    user = anvil.users.get_user()
+    favs = app_tables.favourites.get(user=user)
+    if favs is None:
+        return(True)
 
 @anvil.server.callable
 def delete_favourite(book):

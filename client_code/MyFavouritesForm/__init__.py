@@ -18,8 +18,15 @@ class MyFavouritesForm(MyFavouritesFormTemplate):
         open_form('BookListForm')  # Send them back to book list
         return
 
+    no_favourites = anvil.server.call('no_favourites')
+    print(no_favourites)
+    if no_favourites:
+        alert("You must favourite a book first.")
+        open_form('BookListForm')  # Send them back to book list
+        return
     # Any code you write here will run before the form opens.
 
+      
     self.repeating_panel_favourites.items = anvil.server.call('get_favorite_books')
 
 
