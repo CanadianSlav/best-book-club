@@ -82,9 +82,9 @@ def delete_book(book):
 @anvil.server.callable
 def no_favourites():
     user = anvil.users.get_user()
-    favs = app_tables.favourites.get(user=user)
-    if favs is None:
-        return(True)
+    favs = list(app_tables.favourites.search(user=user))
+    return not favs
+
 
 @anvil.server.callable
 def delete_favourite(book):
