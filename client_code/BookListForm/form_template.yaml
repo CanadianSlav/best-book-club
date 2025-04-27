@@ -21,7 +21,7 @@ components:
   type: Button
 - layout_properties: {grid_position: 'HTSJRL,LROABW'}
   name: repeating_panel_books
-  properties: {item_template: BookListForm.ItemTemplate1}
+  properties: {item_template: BookListForm.BooksRepeating}
   type: RepeatingPanel
 container: {type: ColumnPanel}
 is_package: true

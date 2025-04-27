@@ -21,4 +21,10 @@ class MyFavouritesForm(MyFavouritesFormTemplate):
     # Any code you write here will run before the form opens.
 
     self.repeating_panel_favourites.items = anvil.server.call('get_favorite_books')
+
+
+
+  def back_button_click(self, **event_args):
+    open_form('BookListForm')
+
  

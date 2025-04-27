@@ -52,12 +52,20 @@ components:
   - event_bindings: {click: button_submit_click}
     layout_properties: {grid_position: 'RNUNYH,GADSPO'}
     name: button_submit
-    properties: {role: filled-button, text: Submit}
+    properties:
+      background: theme:Primary
+      foreground: theme:On Primary
+      role: [filled-button, elevated-button]
+      text: Submit
     type: Button
   - event_bindings: {click: button_cancel_click}
     layout_properties: {grid_position: 'RNUNYH,SNJKTK'}
     name: button_cancel
-    properties: {background: 'theme:Error', role: filled-button, text: Cancel}
+    properties:
+      background: theme:Error
+      foreground: theme:On Primary
+      role: [filled-button, elevated-button]
+      text: Cancel
     type: Button
   layout_properties: {grid_position: 'WIGWJV,YHYHHV'}
   name: bookform

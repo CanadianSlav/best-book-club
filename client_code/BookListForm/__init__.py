@@ -13,8 +13,8 @@ class BookListForm(BookListFormTemplate):
     self.init_components(**properties)
     
     self.repeating_panel_books.items = anvil.server.call('get_books')
-    def button_add_book_click(self, **event_args):
-      open_form('BookForm')
+  def button_add_book_click(self, **event_args):
+    open_form('BookForm')
 
     # Any code you write here will run before the form opens.
 
@@ -29,7 +29,7 @@ class BookListForm(BookListFormTemplate):
     anvil.users.login_with_form()
 
   def favourite_books_button_click(self, **event_args):
-      open_form('MyFavouritesForm')
+    open_form('MyFavouritesForm')
 
   def add_article_button_click(self, **event_args):
     # Initialise an empty dictionary to store the user inputs
