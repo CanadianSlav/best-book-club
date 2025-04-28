@@ -1,17 +1,57 @@
 components:
-- event_bindings: {click: back_button_click}
-  layout_properties: {grid_position: 'KLPPQY,NWJKEP'}
-  name: back_button
-  properties: {background: '', foreground: 'theme:Error', icon: 'fa:backward', role: elevated-button, text: Back}
-  type: Button
 - components:
-  - layout_properties: {grid_position: 'KEEDRV,DJKETL'}
-    name: repeating_panel_favourites
-    properties: {item_template: MyFavouritesForm.FavouritesRepeating}
-    type: RepeatingPanel
-  layout_properties: {grid_position: 'CPVVHD,RJVUMR'}
-  name: outlined_card_1
-  properties: {role: elevated-card}
+  - components:
+    - layout_properties: {grid_position: 'KEEDRV,DJKETL'}
+      name: repeating_panel_favourites
+      properties: {item_template: MyFavouritesForm.FavouritesRepeating}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'EXBLEQ,IARKIR'}
+    name: outlined_card_1
+    properties: {role: elevated-card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
   type: ColumnPanel
-container: {type: ColumnPanel}
+- components:
+  - event_bindings: {click: login_button_click}
+    name: button_login
+    properties: {role: elevated-button, text: Login, visible: true}
+    type: Button
+  - event_bindings: {click: button_logout_click}
+    layout_properties: {}
+    name: button_logout
+    properties: {role: elevated-button, text: Logout}
+    type: Button
+  layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- components:
+  - event_bindings: {click: button_all_books_click}
+    layout_properties: {grid_position: 'WTZDKL,MXAIVS'}
+    name: button_all_books
+    properties: {icon: 'fa:book', role: elevated-button, text: All Books}
+    type: Button
+  - event_bindings: {click: favourite_books_button_click}
+    layout_properties: {grid_position: 'HJMOIG,ZSRTPK'}
+    name: button_favourite_books
+    properties: {icon: 'fa:heart', role: elevated-button, text: Favourite Books}
+    type: Button
+  - event_bindings: {click: add_article_button_click}
+    layout_properties: {grid_position: 'YGPESQ,GFOQYL'}
+    name: add_book_button
+    properties: {icon: 'fa:plus-circle', role: elevated-button, text: Add a Book}
+    type: Button
+  layout_properties: {slot: left-nav}
+  name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {role: title, text: Best Book Club}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
 is_package: true
