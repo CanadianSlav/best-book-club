@@ -1,40 +1,66 @@
 components:
 - components:
+  - components:
+    - layout_properties: {grid_position: 'CMVYPB,IMFCGE'}
+      name: repeating_panel_books
+      properties: {item_template: BookListForm.BooksRepeating}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'EISATV,UZSBXW'}
+    name: outlined_card_2
+    properties: {role: elevated-card}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'GNHGFV,YRQYCI'}
+      name: repeating_panel_books_copy
+      properties: {item_template: BookListForm.BooksRepeating}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'EISATV,BAWFBX'}
+    name: outlined_card_1
+    properties: {role: elevated-card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- components:
   - event_bindings: {click: login_button_click}
-    layout_properties: {grid_position: 'RONELF,ZXUCTT'}
     name: button_login
     properties: {role: elevated-button, text: Login, visible: true}
     type: Button
   - event_bindings: {click: button_logout_click}
-    layout_properties: {grid_position: 'RONELF,FSYIHI'}
+    layout_properties: {}
     name: button_logout
-    properties: {role: elevated-button, text: Log Out}
+    properties: {role: elevated-button, text: Logout}
+    type: Button
+  layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- components:
+  - event_bindings: {click: button_all_books_click}
+    layout_properties: {grid_position: 'WTZDKL,MXAIVS'}
+    name: button_all_books
+    properties: {icon: 'fa:book', role: elevated-button, text: All Books}
+    type: Button
+  - event_bindings: {click: favourite_books_button_click}
+    layout_properties: {grid_position: 'HJMOIG,ZSRTPK'}
+    name: button_favourite_books
+    properties: {icon: 'fa:heart', role: elevated-button, text: Favourite Books}
     type: Button
   - event_bindings: {click: add_article_button_click}
-    layout_properties: {grid_position: 'IWTSVR,KFLAMP'}
+    layout_properties: {grid_position: 'YGPESQ,GFOQYL'}
     name: add_book_button
     properties: {icon: 'fa:plus-circle', role: elevated-button, text: Add a Book}
     type: Button
-  - event_bindings: {click: favourite_books_button_click}
-    layout_properties: {grid_position: 'IWTSVR,XQEYKA'}
-    name: button_favourite_books
-    properties: {role: elevated-button, text: Favourite Books}
-    type: Button
-  layout_properties: {grid_position: 'YGLUKS,YEUIFC RXRVEH,XOEGHV'}
-  name: outlined_card_1
-  properties: {role: elevated-card}
+  layout_properties: {slot: left-nav}
+  name: column_panel_1
+  properties: {}
   type: ColumnPanel
-- components:
-  - layout_properties: {grid_position: 'CMVYPB,IMFCGE'}
-    name: repeating_panel_books
-    properties: {item_template: BookListForm.BooksRepeating}
-    type: RepeatingPanel
-  layout_properties: {grid_position: 'YGLUKS,YEUIFC UYBVPB,LIOSBG'}
-  name: outlined_card_2
-  properties: {role: elevated-card}
-  type: ColumnPanel
-container: {type: ColumnPanel}
-custom_component: false
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {role: title, text: Best Book Club}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
 is_package: true
-layout_metadata: {description: Standard Homepage, title: Homepage}
-properties: []

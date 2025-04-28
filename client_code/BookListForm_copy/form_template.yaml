@@ -1,5 +1,19 @@
 components:
-- layout_properties: {slot: default}
+- components:
+  - layout_properties: {grid_position: 'EISATV,UZSBXW'}
+    name: repeating_panel_books_copy
+    properties: {item_template: BookListForm.BooksRepeating}
+    type: RepeatingPanel
+  - components:
+    - layout_properties: {grid_position: 'CMVYPB,IMFCGE'}
+      name: repeating_panel_books
+      properties: {item_template: BookListForm.BooksRepeating}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'EISATV,UZSBXW'}
+    name: outlined_card_2
+    properties: {role: elevated-card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
   name: content_panel
   properties: {}
   type: ColumnPanel
@@ -18,8 +32,8 @@ components:
   properties: {}
   type: FlowPanel
 - components:
-  - event_bindings: {click: favourite_books_button_click}
-    layout_properties: {grid_position: 'XHJVVK,NMVLOX'}
+  - event_bindings: {click: button_all_books_click}
+    layout_properties: {grid_position: 'WTZDKL,MXAIVS'}
     name: button_all_books
     properties: {icon: 'fa:book', role: elevated-button, text: All Books}
     type: Button
