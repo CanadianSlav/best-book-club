@@ -1,91 +1,130 @@
 components:
-- event_bindings: {click: button_back_click}
-  layout_properties: {grid_position: 'CMDVXX,GIILAU'}
-  name: button_back
-  properties: {foreground: 'theme:Error', icon: 'fa:backward', role: elevated-button, text: Back}
-  type: Button
 - components:
-  - data_bindings:
-    - {code: 'self.item[''title'']', property: text, writeback: false}
-    layout_properties: {grid_position: 'LKZYGO,DTFZIP'}
-    name: title
-    properties: {align: center, role: title, text: ''}
-    type: Label
-  - components: []
-    layout_properties: {grid_position: 'IGISRD,VCEIXC'}
-    name: column_panel_1
-    properties: {}
+  - components:
+    - data_bindings:
+      - {code: '''Title: '' + self.item[''title'']', property: text, writeback: false}
+      layout_properties: {grid_position: 'LKZYGO,DTFZIP'}
+      name: title
+      properties: {align: center, role: title, text: ''}
+      type: Label
+    - layout_properties: {grid_position: 'IGISRD,VCEIXC'}
+      name: column_panel_1_copy
+      properties: {}
+      type: ColumnPanel
+    - data_bindings:
+      - {code: '''Author: '' + self.item[''author'']', property: text, writeback: false}
+      layout_properties: {grid_position: 'HFWIGF,EYUEOA'}
+      name: author
+      properties: {align: right, role: input-prompt}
+      type: Label
+    - data_bindings:
+      - {code: '''Genre: '' + self.item[''genre'']', property: text, writeback: false}
+      layout_properties: {grid_position: 'UOMQNY,PSOLLM'}
+      name: genre
+      properties: {align: left}
+      type: Label
+    - data_bindings:
+      - {code: '''Summary: \n'' + self.item[''summary'']', property: text, writeback: false}
+      layout_properties: {grid_position: 'SJEJBX,UQEQPM'}
+      name: summary
+      properties: {align: center}
+      type: Label
+    - data_bindings:
+      - {code: 'self.item[''cover_image'']', property: source, writeback: false}
+      layout_properties: {grid_position: 'VXBOHF,GLBSSU'}
+      name: cover_image
+      properties: {height: 266.693359375}
+      type: Image
+    - components:
+      - event_bindings: {click: button_add_fav_click}
+        layout_properties: {grid_position: 'KBHDGE,PMJAJB'}
+        name: button_add_fav
+        properties: {icon: 'fa:heart', role: elevated-button, text: Add to Favourites}
+        type: Button
+      - layout_properties: {grid_position: 'CMKEAF,IESQBD'}
+        name: dropdown_rating
+        properties:
+          include_placeholder: true
+          items: [⭐, ⭐⭐, ⭐⭐⭐, ⭐⭐⭐⭐, ⭐⭐⭐⭐⭐]
+          placeholder: 'Select the Rating '
+        type: DropDown
+      - layout_properties: {grid_position: 'KYKUIC,JASFVV'}
+        name: text_area_review
+        properties: {italic: false}
+        type: TextArea
+      - event_bindings: {click: button_submit_review_click}
+        layout_properties: {grid_position: 'VIMUML,FAUMQV'}
+        name: button_submit_review
+        properties:
+          background: theme:Primary
+          foreground: theme:On Primary
+          role: [elevated-button, filled-button]
+          text: Submit Review
+        type: Button
+      layout_properties: {grid_position: 'DUAMNO,XHDWDE'}
+      name: outlined_card_2
+      properties: {role: elevated-card}
+      type: ColumnPanel
+    - components:
+      - layout_properties: {grid_position: 'QRHWVU,DQJWAY'}
+        name: Review_title
+        properties: {align: center, font: '', role: title, text: Reviews}
+        type: Label
+      - layout_properties: {grid_position: 'LDCXLT,QMEKIR'}
+        name: repeating_panel_reviews
+        properties: {item_template: BookDetailForm.ReviewRepeating, role: elevated-card}
+        type: RepeatingPanel
+      layout_properties: {grid_position: 'PLKZQI,PEAXYZ'}
+      name: outlined_card_3
+      properties: {role: elevated-card}
+      type: ColumnPanel
+    layout_properties: {grid_position: 'UIEHBW,DFHCRE'}
+    name: outlined_card_1
+    properties: {role: elevated-card}
     type: ColumnPanel
-  - data_bindings:
-    - {code: 'self.item[''author'']', property: text, writeback: false}
-    layout_properties: {grid_position: 'HFWIGF,EYUEOA'}
-    name: author
-    properties: {align: right, role: input-prompt}
-    type: Label
-  - data_bindings:
-    - {code: 'self.item[''genre'']', property: text, writeback: false}
-    layout_properties: {grid_position: 'UOMQNY,PSOLLM'}
-    name: genre
-    properties: {align: left}
-    type: Label
-  - data_bindings:
-    - {code: 'self.item[''summary'']', property: text, writeback: false}
-    layout_properties: {grid_position: 'SJEJBX,UQEQPM'}
-    name: summary
-    properties: {align: center}
-    type: Label
-  - data_bindings:
-    - {code: 'self.item[''cover_image'']', property: source, writeback: false}
-    layout_properties: {grid_position: 'VXBOHF,GLBSSU'}
-    name: cover_image
-    properties: {height: 266.693359375}
-    type: Image
-  layout_properties: {grid_position: 'HZGKKS,TVMQDR'}
-  name: outlined_card_1
-  properties: {role: elevated-card}
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
   type: ColumnPanel
 - components:
-  - event_bindings: {click: button_add_fav_click}
-    layout_properties: {grid_position: 'KBHDGE,PMJAJB'}
-    name: button_add_fav
-    properties: {icon: 'fa:heart', role: elevated-button, text: Add to Favourites}
+  - event_bindings: {click: login_button_click}
+    name: button_login
+    properties: {role: elevated-button, text: Login, visible: true}
     type: Button
-  - layout_properties: {grid_position: 'CMKEAF,IESQBD'}
-    name: dropdown_rating
-    properties:
-      include_placeholder: true
-      items: [⭐, ⭐⭐, ⭐⭐⭐, ⭐⭐⭐⭐, ⭐⭐⭐⭐⭐]
-      placeholder: 'Select the rating '
-    type: DropDown
-  - layout_properties: {grid_position: 'KYKUIC,JASFVV'}
-    name: text_area_review
-    properties: {italic: false}
-    type: TextArea
-  - event_bindings: {click: button_submit_review_click}
-    layout_properties: {grid_position: 'VIMUML,FAUMQV'}
-    name: button_submit_review
-    properties:
-      background: theme:Primary
-      foreground: theme:On Primary
-      role: [elevated-button, filled-button]
-      text: Submit Review
+  - event_bindings: {click: button_logout_click}
+    layout_properties: {}
+    name: button_logout
+    properties: {role: elevated-button, text: Logout}
     type: Button
-  layout_properties: {grid_position: 'GWAJAL,XOTFMA'}
-  name: outlined_card_2
-  properties: {role: elevated-card}
-  type: ColumnPanel
+  layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
 - components:
-  - layout_properties: {grid_position: 'QRHWVU,DQJWAY'}
-    name: Review_title
-    properties: {align: center, font: '', role: title, text: Reviews}
-    type: Label
-  - layout_properties: {grid_position: 'LDCXLT,QMEKIR'}
-    name: repeating_panel_reviews
-    properties: {item_template: BookDetailForm.ReviewRepeating, role: elevated-card}
-    type: RepeatingPanel
-  layout_properties: {grid_position: 'KZWCEI,RMXQYO'}
-  name: outlined_card_3
-  properties: {role: elevated-card}
+  - event_bindings: {click: button_all_books_click}
+    layout_properties: {grid_position: 'WTZDKL,MXAIVS'}
+    name: button_all_books
+    properties: {icon: 'fa:book', role: elevated-button, text: All Books}
+    type: Button
+  - event_bindings: {click: favourite_books_button_click}
+    layout_properties: {grid_position: 'HJMOIG,ZSRTPK'}
+    name: button_favourite_books
+    properties: {icon: 'fa:heart', role: elevated-button, text: Favourite Books}
+    type: Button
+  - event_bindings: {click: add_article_button_click}
+    layout_properties: {grid_position: 'YGPESQ,GFOQYL'}
+    name: add_book_button
+    properties: {icon: 'fa:plus-circle', role: elevated-button, text: Add a Book}
+    type: Button
+  layout_properties: {slot: left-nav}
+  name: column_panel_1
+  properties: {}
   type: ColumnPanel
-container: {type: ColumnPanel}
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {icon: 'fa:book', role: title, text: Best Book Club}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
 is_package: true
