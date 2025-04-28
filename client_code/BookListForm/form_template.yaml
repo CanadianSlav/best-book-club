@@ -20,7 +20,7 @@ components:
     name: button_favourite_books
     properties: {role: elevated-button, text: Favourite Books}
     type: Button
-  layout_properties: {grid_position: 'RXRVEH,XOEGHV'}
+  layout_properties: {grid_position: 'YGLUKS,YEUIFC RXRVEH,XOEGHV'}
   name: outlined_card_1
   properties: {role: elevated-card}
   type: ColumnPanel
@@ -29,9 +29,12 @@ components:
     name: repeating_panel_books
     properties: {item_template: BookListForm.BooksRepeating}
     type: RepeatingPanel
-  layout_properties: {grid_position: 'UYBVPB,LIOSBG'}
+  layout_properties: {grid_position: 'YGLUKS,YEUIFC UYBVPB,LIOSBG'}
   name: outlined_card_2
   properties: {role: elevated-card}
   type: ColumnPanel
 container: {type: ColumnPanel}
+custom_component: false
 is_package: true
+layout_metadata: {description: Standard Homepage, title: Homepage}
+properties: []

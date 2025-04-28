@@ -5,15 +5,11 @@ components:
   properties: {foreground: 'theme:Error', icon: 'fa:backward', role: elevated-button, text: Back}
   type: Button
 - components:
-  - layout_properties: {grid_position: 'LKZYGO,PRQYXI'}
-    name: label_1
-    properties: {align: right, role: title, text: 'Title:'}
-    type: Label
   - data_bindings:
     - {code: 'self.item[''title'']', property: text, writeback: false}
     layout_properties: {grid_position: 'LKZYGO,DTFZIP'}
     name: title
-    properties: {align: left, role: title, text: ''}
+    properties: {align: center, role: title, text: ''}
     type: Label
   - components: []
     layout_properties: {grid_position: 'IGISRD,VCEIXC'}
