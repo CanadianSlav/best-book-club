@@ -42,7 +42,7 @@ components:
     type: TextArea
   - layout_properties: {grid_position: 'PSOWOM,DPDJTF'}
     name: label_4
-    properties: {text: 'Cover_image:'}
+    properties: {text: 'Cover image:'}
     type: Label
   - event_bindings: {change: file_loader_cover_change}
     layout_properties: {grid_position: 'PSOWOM,MAAIWR'}

@@ -19,7 +19,7 @@ class MyFavouritesForm(MyFavouritesFormTemplate):
         return
 
     no_favourites = anvil.server.call('no_favourites')
-    print(no_favourites)
+    
     if no_favourites:
         alert("You must favourite a book first.")
         open_form('BookListForm')  # Send them back to book list

@@ -38,7 +38,7 @@ components:
     foreground: theme:On Primary
     icon: fa:trash
     role: [filled-button, elevated-button]
-    text: ''
+    text: Delete Book
   type: Button
 container: {type: ColumnPanel}
 is_package: true
