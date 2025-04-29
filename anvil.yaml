@@ -82,9 +82,10 @@ db_schema:
     server: full
     title: Users
 dependencies: []
-name: BookClubApp
+metadata: {description: The world's best book club!, logo_img: 'asset:free-opened-book-icon-3163-thumb.png', title: Best Book Club}
+name: Best Book Club
 native_deps: null
-package_name: BookClubApp
+package_name: Best_Book_Club
 renamed: true
 runtime_options:
   client_version: '3'
