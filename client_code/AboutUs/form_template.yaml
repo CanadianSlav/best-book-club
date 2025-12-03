@@ -1,10 +1,32 @@
 components:
 - components:
   - components:
-    - layout_properties: {grid_position: 'CMVYPB,IMFCGE'}
-      name: repeating_panel_books
-      properties: {item_template: BookListForm.BooksRepeating}
-      type: RepeatingPanel
+    - layout_properties: {grid_position: 'GRZNYB,MTOCCV'}
+      name: label_2
+      properties: {align: center, bold: true, font_size: 50, icon: 'fa:question-circle', icon_align: right, text: About Us, underline: true}
+      type: Label
+    - layout_properties: {grid_position: 'INQUJQ,GUWVIT'}
+      name: label_3
+      properties:
+        font_size: 18
+        text: |-
+          We are Sage and Sieun, two teenagers who love reading. But finding a good book was always way harder than it needed to be.
+
+          Every book website we tried felt off.           They were either:
+               •  made for little kids,
+               •  filled with adult books we couldn’t relate to, or
+               •  a mix of everything with no real teen voice behind it.
+
+          And the reviews?           You never actually know who wrote them.           For all we knew, the “perfect book” someone recommended could have come from a 50-year-old person with completely different tastes than any teenager.
+
+          So we created Novalish.
+
+          A space built by teens, for teens, and run by teens.           Here, only teenagers can share recommendations, write reviews, and help each other find their next read. No adult suggestions, no random reviewers, just real opinions from people your age, in your community, who actually get what you’re looking for.
+
+          We wanted a place where finding a great book is simple, trustworthy, and literally one click away. Novalish isn’t just a website - it’s our space.           A space for students who love reading, want to start reading more, or just need a book that matches their vibe.
+
+          Real teens. Real reviews. Real books you’ll actually like.           Welcome to Novalish.
+      type: Label
     layout_properties: {grid_position: 'EISATV,UZSBXW'}
     name: outlined_card_2
     properties: {role: elevated-card}

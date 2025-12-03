@@ -38,7 +38,7 @@ components:
     foreground: theme:On Primary
     icon: fa:trash
     role: [filled-button, elevated-button]
-    text: Remove Favourite
+    text: Remove Next to Read
   type: Button
 container: {type: ColumnPanel}
 is_package: true

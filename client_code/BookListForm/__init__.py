@@ -30,3 +30,6 @@ class BookListForm(BookListFormTemplate):
     def button_logout_click(self, **event_args):
         anvil.users.logout()
         open_form('BookListForm')
+
+    def about_us_button_click(self, **event_args):
+        open_form('AboutUs')

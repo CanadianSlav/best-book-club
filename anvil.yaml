@@ -82,7 +82,7 @@ db_schema:
     server: full
     title: Users
 dependencies: []
-metadata: {description: The world's best book club!, logo_img: 'asset:free-opened-book-icon-3163-thumb.png', title: Best Book Club}
+metadata: {description: The world's best book club!, logo_img: 'asset:free-opened-book-icon-3163-thumb.png', title: Novalish}
 name: Best Book Club
 native_deps: null
 package_name: Best_Book_Club

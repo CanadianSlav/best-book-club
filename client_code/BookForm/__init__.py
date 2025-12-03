@@ -10,6 +10,12 @@ from anvil.tables import app_tables
 class BookForm(BookFormTemplate):
     def __init__(self, book=None, **properties):
         # Set Form properties and Data Bindings.
+        user = anvil.users.get_user()
+        if not user:
+            alert("You must be logged in to add/edit books.")
+            open_form('BookListForm')  # Send them back to book list
+            return
+        
         self.init_components(**properties)
         
         self.book = book
@@ -72,3 +78,6 @@ class BookForm(BookFormTemplate):
     def button_logout_click(self, **event_args):
         anvil.users.logout()
         open_form("BookListForm")
+
+    def about_us_button_click(self, **event_args):
+        open_form("AboutUs")

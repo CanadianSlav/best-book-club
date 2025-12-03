@@ -1,0 +1,29 @@
+from ._anvil_designer import AboutUsTemplate
+from anvil import *
+import anvil.server
+import anvil.users
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
+
+
+class AboutUs(AboutUsTemplate):
+
+    def button_all_books_click(self, **event_args):
+        open_form("BookListForm")
+
+    def favourite_books_button_click(self, **event_args):
+        open_form("MyFavouritesForm")
+
+    def add_article_button_click(self, **event_args):
+        open_form("BookForm")
+
+    def login_button_click(self, **event_args):
+        anvil.users.login_with_form()
+
+    def button_logout_click(self, **event_args):
+        anvil.users.logout()
+        open_form("BookListForm")
+
+    def about_us_button_click(self, **event_args):
+        open_form("AboutUs")

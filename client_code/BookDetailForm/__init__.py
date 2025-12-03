@@ -21,16 +21,16 @@ class BookDetailForm(BookDetailFormTemplate):
         user = anvil.users.get_user()
         book = self.item
         if not user:
-            alert("Please log in before favouriting a book.")
+            alert("Please log in before adding to Next to Read.")
             return
         else:
             # Check if the book is already in the user's favorites using the server-side function
             if anvil.server.call('is_favourite', book):
-                alert("You already added it to your favorite list")
+                alert("You already added it to your Next to Read list")
             else:
                 # Add the book to favorites if not already present
                 anvil.server.call('add_to_favourites', book)
-                alert("Book added to your favorites!")
+                alert("Book added to your Next to Read!")
         
     def button_submit_review_click(self, **event_args):
         user = anvil.users.get_user()

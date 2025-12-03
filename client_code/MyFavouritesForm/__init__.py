@@ -14,14 +14,14 @@ class MyFavouritesForm(MyFavouritesFormTemplate):
     
         user = anvil.users.get_user()
         if not user:
-            alert("You must be logged in to view your favorite books.")
+            alert("You must be logged in to view your next to read books.")
             open_form('BookListForm')  # Send them back to book list
             return
     
         no_favourites = anvil.server.call('no_favourites')
         
         if no_favourites:
-            alert("You must favourite a book first.")
+            alert("You must select a next to read book first.")
             open_form('BookListForm')  # Send them back to book list
             return
 
@@ -46,3 +46,6 @@ class MyFavouritesForm(MyFavouritesFormTemplate):
     def button_logout_click(self, **event_args):
         anvil.users.logout()
         open_form("BookListForm")
+
+    def about_us_button_click(self, **event_args):
+        open_form("AboutUs")

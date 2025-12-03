@@ -39,7 +39,7 @@ components:
       - event_bindings: {click: button_add_fav_click}
         layout_properties: {grid_position: 'KBHDGE,PMJAJB'}
         name: button_add_fav
-        properties: {icon: 'fa:heart', role: elevated-button, text: Add to Favourites}
+        properties: {icon: 'fa:heart', role: elevated-button, text: Add to Next to Read}
         type: Button
       - layout_properties: {grid_position: 'CMKEAF,IESQBD'}
         name: dropdown_rating
@@ -108,13 +108,18 @@ components:
     type: Button
   - event_bindings: {click: favourite_books_button_click}
     layout_properties: {grid_position: 'HJMOIG,ZSRTPK'}
-    name: button_favourite_books
-    properties: {icon: 'fa:heart', role: elevated-button, text: Favourite Books}
+    name: favourite_books_button
+    properties: {icon: 'fa:heart', role: elevated-button, text: Next to Read}
     type: Button
   - event_bindings: {click: add_article_button_click}
     layout_properties: {grid_position: 'YGPESQ,GFOQYL'}
     name: add_book_button
     properties: {icon: 'fa:plus-circle', role: elevated-button, text: Add a Book}
+    type: Button
+  - event_bindings: {click: add_article_button_click}
+    layout_properties: {grid_position: 'DJOXGE,VPYLRL'}
+    name: about_us_button
+    properties: {icon: 'fa:question-circle', role: elevated-button, text: About Us}
     type: Button
   layout_properties: {slot: left-nav}
   name: column_panel_1
@@ -122,7 +127,7 @@ components:
   type: ColumnPanel
 - layout_properties: {slot: title}
   name: label_1
-  properties: {icon: 'fa:book', role: title, text: Best Book Club}
+  properties: {icon: 'fa:book', role: title, text: Novalish}
   type: Label
 container:
   properties: {html: '@theme:standard-page.html'}

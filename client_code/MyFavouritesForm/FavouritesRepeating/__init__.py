@@ -21,6 +21,6 @@ class FavouritesRepeating(FavouritesRepeatingTemplate):
         open_form("BookForm", book=self.item)
 
     def delete_button_click(self, **event_args):
-        if confirm("Are you sure you want to delete this book from your favourites?"):
+        if confirm("Are you sure you want to delete this book from your Next to Read?"):
             anvil.server.call("delete_favourite", self.item)
             open_form("BookListForm")
